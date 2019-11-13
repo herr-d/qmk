@@ -1,3 +1,13 @@
+
+# NEO LAYOUT FOR MASSDROP CTRL
+
+This is a fork from the massdrop repository to add the (German) neo keyboard layout.
+Currently, the OS needs to have US English selected as its input method. Some keys are therefor not supported natively such as ä,ö,ü and I implemented them using UTF8 sequences. Windows does not support that without any additonal programs... It might be better to switch to german as the underlying layout.
+Also I didn't have time to implement more than 3 layers.
+
+The configuration files are under keymaps/herrd_neo_layout
+
+
 # CTRL
 
 ![CTRL](https://massdrop-s3.imgix.net/product-images/massdrop-ntkl-mechanical-keyboard/FP/W6zvr0cTR4KVDY5z8rwp_AI7B6588%20copy%20page.jpg?auto=format&fm=jpg&fit=max&w=700&h=467&dpr=1&q=80)
