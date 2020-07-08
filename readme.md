@@ -19,7 +19,7 @@ led_instruction_t led_instructions[] = {
     ...
 ```
 
-### Small disclaimer
+## Small disclaimer
 This does not yet implement the full neo keyboard specification. Only the common key combinations that I need to use. Feel free to send me a more complete version and I will merge it in this repo.
 
 Cheers!
