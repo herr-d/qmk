@@ -2,11 +2,27 @@
 # NEO LAYOUT FOR MASSDROP CTRL
 
 This is a fork from the massdrop repository to add the (German) neo keyboard layout.
-Currently, the OS needs to have US English selected as its input method. Some keys are therefor not supported natively such as ä,ö,ü and I implemented them using UTF8 sequences. Windows does not support that without any additonal programs... It might be better to switch to german as the underlying layout.
-Also I didn't have time to implement more than 3 layers.
+I updated the previous version such that it now uses the German QWERTZ layout for the language of the OS.
+Neo has UTF support which is realized through UTF8 sequences. Windows does not support that without any additonal programs. To get the full support you need to install a program that interprets the UTF sequences. This is only for special keys and I don't use that feature that often. Therefor the higher layers are only sparsely implemented. The first layer is the standard ctrl Layout.
 
-The configuration files are under keymaps/herrd_neo_layout
+The configuration files are under ```keymaps/herrd_neo_layout```
 
+## Led configuration
+To change the order of the different LED presets change the ```*led_setups[]``` variable in:
+```
+ qmk_firmware/tmk_core/protocol/arm_atsam/led_matrix_programs.c 
+```
+For more settings see e.g. ```default_md/keymap.c```. There is a dictionary with many comments on settings at the end.
+```
+
+led_instruction_t led_instructions[] = {
+    ...
+```
+
+### Small disclaimer
+This does not yet implement the full neo keyboard specification. Only the common key combinations that I need to use. Feel free to send me a more complete version and I will merge it in this repo.
+
+Cheers!
 
 # CTRL
 
