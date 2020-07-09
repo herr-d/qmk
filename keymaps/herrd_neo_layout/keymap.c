@@ -1,7 +1,8 @@
 #include QMK_KEYBOARD_H
 
 // Neo Specific Unicode Characters
-enum unicode_names {
+enum unicode_names
+{
     hat,
     r_acc,
     l_acc,
@@ -38,59 +39,64 @@ enum unicode_names {
 };
 
 const uint32_t PROGMEM unicode_map[] = {
-    [hat]   = 0x02C6,  // ^ (letter modifier)
-    [r_acc] = 0x02CB,   [l_acc] = 0x02CA, [long_s] = 0x017F,
-    [ae]      = 0x00E4,  // ä
-    [AE]      = 0x00C4,  // Ä
-    [oe]      = 0x00F6,  // ö
-    [OE]      = 0x00D6,  // Ö
-    [ue]      = 0x00FC,  // ü
-    [UE]      = 0x00DC,  // Ü
-    [sz]      = 0x00DF,  // ß
-    [SZ]      = 0x1E9E,  // ẞ
-    [elli]    = 0x2026,  // ...
-    [inv_ex]  = 0x00A1,  // ¡
-    [inv_qm]  = 0x00BF,  // ¿
-    [ordf]    = 0x00AA,  // ª
-    [deg]     = 0x00B0,  // º
-    [No]      = 0x2116,  // №
-    [dots]    = 0x22FE,  // ⋮
-    [middot]  = 0x00B7,  // ·
-    [pound]   = 0x00A3,  // £
-    [curren]  = 0x00A4,  // ¤
-    [sup1]    = 0x00B9,  // ¹
-    [sup2]    = 0x00B2,  // ²
-    [sup3]    = 0x00B3,  // ³
-    [s_s]     = 0x2039,  // ‹
-    [s_g]     = 0x203A,  // ›
-    [en_dash] = 0x2014,  // −
-    [dot_up]  = 0x02D9,  //̇
-    [two_acc] = 0x02F6,  // ̋
-    [cent] = 0x00A2,    [yen] = 0x00A5,   [upring] = 0x02DA,
+    [hat] = 0x02C6, // ^ (letter modifier)
+    [r_acc] = 0x02CB,
+    [l_acc] = 0x02CA,
+    [long_s] = 0x017F,
+    [ae] = 0x00E4,      // ä
+    [AE] = 0x00C4,      // Ä
+    [oe] = 0x00F6,      // ö
+    [OE] = 0x00D6,      // Ö
+    [ue] = 0x00FC,      // ü
+    [UE] = 0x00DC,      // Ü
+    [sz] = 0x00DF,      // ß
+    [SZ] = 0x1E9E,      // ẞ
+    [elli] = 0x2026,    // ...
+    [inv_ex] = 0x00A1,  // ¡
+    [inv_qm] = 0x00BF,  // ¿
+    [ordf] = 0x00AA,    // ª
+    [deg] = 0x00B0,     // º
+    [No] = 0x2116,      // №
+    [dots] = 0x22FE,    // ⋮
+    [middot] = 0x00B7,  // ·
+    [pound] = 0x00A3,   // £
+    [curren] = 0x00A4,  // ¤
+    [sup1] = 0x00B9,    // ¹
+    [sup2] = 0x00B2,    // ²
+    [sup3] = 0x00B3,    // ³
+    [s_s] = 0x2039,     // ‹
+    [s_g] = 0x203A,     // ›
+    [en_dash] = 0x2014, // −
+    [dot_up] = 0x02D9,  //̇
+    [two_acc] = 0x02F6, // ̋
+    [cent] = 0x00A2,
+    [yen] = 0x00A5,
+    [upring] = 0x02DA,
 };
 
-enum ctrl_keycodes {
-    L_BRI = SAFE_RANGE,  // LED Brightness Increase                                   //Working
-    L_BRD,               // LED Brightness Decrease                                   //Working
-    L_PTN,               // LED Pattern Select Next                                   //Working
-    L_PTP,               // LED Pattern Select Previous                               //Working
-    L_PSI,               // LED Pattern Speed Increase                                //Working
-    L_PSD,               // LED Pattern Speed Decrease                                //Working
-    L_T_MD,              // LED Toggle Mode                                           //Working
-    L_T_ONF,             // LED Toggle On / Off                                       //Broken
-    L_ON,                // LED On                                                    //Broken
-    L_OFF,               // LED Off                                                   //Broken
-    L_T_BR,              // LED Toggle Breath Effect                                  //Working
-    L_T_PTD,             // LED Toggle Scrolling Pattern Direction                    //Working
-    U_T_AGCR,            // USB Toggle Automatic GCR control                          //Working
-    DBG_TOG,             // DEBUG Toggle On / Off                                     //
-    DBG_MTRX,            // DEBUG Toggle Matrix Prints                                //
-    DBG_KBD,             // DEBUG Toggle Keyboard Prints                              //
-    DBG_MOU,             // DEBUG Toggle Mouse Prints                                 //
-    MD_BOOT              // Restart into bootloader after hold timeout                //Working
+enum ctrl_keycodes
+{
+    L_BRI = SAFE_RANGE, // LED Brightness Increase                                   //Working
+    L_BRD,              // LED Brightness Decrease                                   //Working
+    L_PTN,              // LED Pattern Select Next                                   //Working
+    L_PTP,              // LED Pattern Select Previous                               //Working
+    L_PSI,              // LED Pattern Speed Increase                                //Working
+    L_PSD,              // LED Pattern Speed Decrease                                //Working
+    L_T_MD,             // LED Toggle Mode                                           //Working
+    L_T_ONF,            // LED Toggle On / Off                                       //Broken
+    L_ON,               // LED On                                                    //Broken
+    L_OFF,              // LED Off                                                   //Broken
+    L_T_BR,             // LED Toggle Breath Effect                                  //Working
+    L_T_PTD,            // LED Toggle Scrolling Pattern Direction                    //Working
+    U_T_AGCR,           // USB Toggle Automatic GCR control                          //Working
+    DBG_TOG,            // DEBUG Toggle On / Off                                     //
+    DBG_MTRX,           // DEBUG Toggle Matrix Prints                                //
+    DBG_KBD,            // DEBUG Toggle Keyboard Prints                              //
+    DBG_MOU,            // DEBUG Toggle Mouse Prints                                 //
+    MD_BOOT             // Restart into bootloader after hold timeout                //Working
 };
 
-#define TG_NKRO MAGIC_TOGGLE_NKRO  // Toggle 6KRO / NKRO mode
+#define TG_NKRO MAGIC_TOGGLE_NKRO // Toggle 6KRO / NKRO mode
 
 keymap_config_t keymap_config;
 
@@ -119,168 +125,195 @@ void matrix_scan_user(void){};
 #define MODS_CTRL (get_mods() & MOD_BIT(KC_LCTL) || get_mods() & MOD_BIT(KC_RCTRL))
 #define MODS_ALT (get_mods() & MOD_BIT(KC_LALT) || get_mods() & MOD_BIT(KC_RALT))
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+bool process_record_user(uint16_t keycode, keyrecord_t *record)
+{
     static uint32_t key_timer;
 
-    switch (keycode) {
-        case L_BRI:
-            if (record->event.pressed) {
-                if (LED_GCR_STEP > LED_GCR_MAX - gcr_desired)
-                    gcr_desired = LED_GCR_MAX;
-                else
-                    gcr_desired += LED_GCR_STEP;
-                if (led_animation_breathing) gcr_breathe = gcr_desired;
+    switch (keycode)
+    {
+    case L_BRI:
+        if (record->event.pressed)
+        {
+            if (LED_GCR_STEP > LED_GCR_MAX - gcr_desired)
+                gcr_desired = LED_GCR_MAX;
+            else
+                gcr_desired += LED_GCR_STEP;
+            if (led_animation_breathing)
+                gcr_breathe = gcr_desired;
+        }
+        return false;
+    case L_BRD:
+        if (record->event.pressed)
+        {
+            if (LED_GCR_STEP > gcr_desired)
+                gcr_desired = 0;
+            else
+                gcr_desired -= LED_GCR_STEP;
+            if (led_animation_breathing)
+                gcr_breathe = gcr_desired;
+        }
+        return false;
+    case L_PTN:
+        if (record->event.pressed)
+        {
+            if (led_animation_id == led_setups_count - 1)
+                led_animation_id = 0;
+            else
+                led_animation_id++;
+        }
+        return false;
+    case L_PTP:
+        if (record->event.pressed)
+        {
+            if (led_animation_id == 0)
+                led_animation_id = led_setups_count - 1;
+            else
+                led_animation_id--;
+        }
+        return false;
+    case L_PSI:
+        if (record->event.pressed)
+        {
+            led_animation_speed += ANIMATION_SPEED_STEP;
+        }
+        return false;
+    case L_PSD:
+        if (record->event.pressed)
+        {
+            led_animation_speed -= ANIMATION_SPEED_STEP;
+            if (led_animation_speed < 0)
+                led_animation_speed = 0;
+        }
+        return false;
+    case L_T_MD:
+        if (record->event.pressed)
+        {
+            led_lighting_mode++;
+            if (led_lighting_mode > LED_MODE_MAX_INDEX)
+                led_lighting_mode = LED_MODE_NORMAL;
+        }
+        return false;
+    case L_T_ONF:
+        if (record->event.pressed)
+        {
+            led_enabled = !led_enabled;
+            I2C3733_Control_Set(led_enabled);
+        }
+        return false;
+    case L_ON:
+        if (record->event.pressed)
+        {
+            led_enabled = 1;
+            I2C3733_Control_Set(led_enabled);
+        }
+        return false;
+    case L_OFF:
+        if (record->event.pressed)
+        {
+            led_enabled = 0;
+            I2C3733_Control_Set(led_enabled);
+        }
+        return false;
+    case L_T_BR:
+        if (record->event.pressed)
+        {
+            led_animation_breathing = !led_animation_breathing;
+            if (led_animation_breathing)
+            {
+                gcr_breathe = gcr_desired;
+                led_animation_breathe_cur = BREATHE_MIN_STEP;
+                breathe_dir = 1;
             }
-            return false;
-        case L_BRD:
-            if (record->event.pressed) {
-                if (LED_GCR_STEP > gcr_desired)
-                    gcr_desired = 0;
-                else
-                    gcr_desired -= LED_GCR_STEP;
-                if (led_animation_breathing) gcr_breathe = gcr_desired;
-            }
-            return false;
-        case L_PTN:
-            if (record->event.pressed) {
-                if (led_animation_id == led_setups_count - 1)
-                    led_animation_id = 0;
-                else
-                    led_animation_id++;
-            }
-            return false;
-        case L_PTP:
-            if (record->event.pressed) {
-                if (led_animation_id == 0)
-                    led_animation_id = led_setups_count - 1;
-                else
-                    led_animation_id--;
-            }
-            return false;
-        case L_PSI:
-            if (record->event.pressed) {
-                led_animation_speed += ANIMATION_SPEED_STEP;
-            }
-            return false;
-        case L_PSD:
-            if (record->event.pressed) {
-                led_animation_speed -= ANIMATION_SPEED_STEP;
-                if (led_animation_speed < 0) led_animation_speed = 0;
-            }
-            return false;
-        case L_T_MD:
-            if (record->event.pressed) {
-                led_lighting_mode++;
-                if (led_lighting_mode > LED_MODE_MAX_INDEX) led_lighting_mode = LED_MODE_NORMAL;
-            }
-            return false;
-        case L_T_ONF:
-            if (record->event.pressed) {
-                led_enabled = !led_enabled;
-                I2C3733_Control_Set(led_enabled);
-            }
-            return false;
-        case L_ON:
-            if (record->event.pressed) {
-                led_enabled = 1;
-                I2C3733_Control_Set(led_enabled);
-            }
-            return false;
-        case L_OFF:
-            if (record->event.pressed) {
-                led_enabled = 0;
-                I2C3733_Control_Set(led_enabled);
-            }
-            return false;
-        case L_T_BR:
-            if (record->event.pressed) {
-                led_animation_breathing = !led_animation_breathing;
-                if (led_animation_breathing) {
-                    gcr_breathe               = gcr_desired;
-                    led_animation_breathe_cur = BREATHE_MIN_STEP;
-                    breathe_dir               = 1;
-                }
-            }
-            return false;
-        case L_T_PTD:
-            if (record->event.pressed) {
-                led_animation_direction = !led_animation_direction;
-            }
-            return false;
-        case U_T_AGCR:
-            if (record->event.pressed && MODS_SHIFT && MODS_CTRL) {
-                TOGGLE_FLAG_AND_PRINT(usb_gcr_auto, "USB GCR auto mode");
-            }
-            return false;
-        case DBG_TOG:
-            if (record->event.pressed) {
-                TOGGLE_FLAG_AND_PRINT(debug_enable, "Debug mode");
-            }
-            return false;
-        case DBG_MTRX:
-            if (record->event.pressed) {
-                TOGGLE_FLAG_AND_PRINT(debug_matrix, "Debug matrix");
-            }
-            return false;
-        case DBG_KBD:
-            if (record->event.pressed) {
-                TOGGLE_FLAG_AND_PRINT(debug_keyboard, "Debug keyboard");
-            }
-            return false;
-        case DBG_MOU:
-            if (record->event.pressed) {
-                TOGGLE_FLAG_AND_PRINT(debug_mouse, "Debug mouse");
-            }
-            return false;
-        case MD_BOOT:
-            if (record->event.pressed) {
-                key_timer = timer_read32();
-            } else {
-                if (timer_elapsed32(key_timer) >= 500) {
-                    reset_keyboard();
-                }
-            }
+        }
+        return false;
+    case L_T_PTD:
+        if (record->event.pressed)
+        {
+            led_animation_direction = !led_animation_direction;
+        }
+        return false;
+    case U_T_AGCR:
+        if (record->event.pressed && MODS_SHIFT && MODS_CTRL)
+        {
+            TOGGLE_FLAG_AND_PRINT(usb_gcr_auto, "USB GCR auto mode");
+        }
+        return false;
+    case DBG_TOG:
+        if (record->event.pressed)
+        {
+            TOGGLE_FLAG_AND_PRINT(debug_enable, "Debug mode");
+        }
+    }
+    return false;
+case RGB_TOG:
+    if (record->event.pressed)
+    {
+        switch (rgb_matrix_get_flags())
+        {
+        case LED_FLAG_ALL:
+        {
+            rgb_matrix_set_flags(LED_FLAG_KEYLIGHT);
+            rgb_matrix_set_color_all(0, 0, 0);
+        }
+        break;
+        case LED_FLAG_KEYLIGHT:
+        {
+            rgb_matrix_set_flags(LED_FLAG_UNDERGLOW);
+            rgb_matrix_set_color_all(0, 0, 0);
+        }
+        break;
+        case LED_FLAG_UNDERGLOW:
+        {
+            rgb_matrix_set_flags(LED_FLAG_NONE);
+            rgb_matrix_disable_noeeprom();
+        }
+        break;
+        default:
+        {
+            rgb_matrix_set_flags(LED_FLAG_ALL);
+            rgb_matrix_enable_noeeprom();
+        }
             return false;
         default:
-            return true;  // Process all other keycodes normally
+            return true; // Process all other keycodes normally
+        }
     }
-}
 
-led_instruction_t led_instructions[] = {
-    // LEDs are normally inactive, no processing is performed on them
-    // Flags are used in matching criteria for an LED to be active and indicate how to color it
-    // Flags can be found in tmk_core/protocol/arm_atsam/led_matrix.h (prefixed with LED_FLAG_)
-    // LED IDs can be found in config_led.h in the keyboard's directory
-    // Examples are below
+    led_instruction_t led_instructions[] = {
+        // LEDs are normally inactive, no processing is performed on them
+        // Flags are used in matching criteria for an LED to be active and indicate how to color it
+        // Flags can be found in tmk_core/protocol/arm_atsam/led_matrix.h (prefixed with LED_FLAG_)
+        // LED IDs can be found in config_led.h in the keyboard's directory
+        // Examples are below
 
-    // All LEDs use the user's selected pattern (this is the factory default)
-    {.flags = LED_FLAG_USE_ROTATE_PATTERN},
+        // All LEDs use the user's selected pattern (this is the factory default)
+        {.flags = LED_FLAG_USE_ROTATE_PATTERN},
 
-    // Specific LEDs use the user's selected pattern while all others are off
-    // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_USE_ROTATE_PATTERN, .id0 = 0xFFFFFFFF, .id1 = 0xAAAAAAAA, .id2 = 0x55555555, .id3 = 0x11111111 },
+        // Specific LEDs use the user's selected pattern while all others are off
+        // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_USE_ROTATE_PATTERN, .id0 = 0xFFFFFFFF, .id1 = 0xAAAAAAAA, .id2 = 0x55555555, .id3 = 0x11111111 },
 
-    // Specific LEDs use specified RGB values while all others are off
-    // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_USE_RGB, .id0 = 0xFF, .id1 = 0x00FF, .id2 = 0x0000FF00, .id3 = 0xFF000000, .r = 75, .g = 150, .b = 225 },
+        // Specific LEDs use specified RGB values while all others are off
+        // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_USE_RGB, .id0 = 0xFF, .id1 = 0x00FF, .id2 = 0x0000FF00, .id3 = 0xFF000000, .r = 75, .g = 150, .b = 225 },
 
-    // All LEDs use the user's selected pattern
-    // On layer 1, all key LEDs (except the top row which keeps active pattern) are red while all edge LEDs are green
-    // When layer 1 is active, key LEDs use red    (id0  32 -  17: 1111 1111 1111 1111 0000 0000 0000 0000 = 0xFFFF0000) (except top row 16 - 1)
-    // When layer 1 is active, key LEDs use red    (id1  64 -  33: 1111 1111 1111 1111 1111 1111 1111 1111 = 0xFFFFFFFF)
-    // When layer 1 is active, key LEDs use red    (id2  87 -  65: 0000 0000 0111 1111 1111 1111 1111 1111 = 0x007FFFFF)
-    // When layer 1 is active, edge LEDs use green (id2  95 -  88: 1111 1111 1000 0000 0000 0000 0000 0000 = 0xFF800000)
-    // When layer 1 is active, edge LEDs use green (id3 119 -  96: 0000 0000 1111 1111 1111 1111 1111 1111 = 0x00FFFFFF)
-    // { .flags = LED_FLAG_USE_ROTATE_PATTERN },
-    // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_MATCH_LAYER | LED_FLAG_USE_RGB, .id0 = 0xFFFF0000, .id1 = 0xFFFFFFFF, .id2 = 0x007FFFFF, .r = 255, .layer = 1 },
-    // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_MATCH_LAYER | LED_FLAG_USE_RGB, .id2 = 0xFF800000, .id3 = 0x00FFFFFF, .g = 127, .layer = 1 },
+        // All LEDs use the user's selected pattern
+        // On layer 1, all key LEDs (except the top row which keeps active pattern) are red while all edge LEDs are green
+        // When layer 1 is active, key LEDs use red    (id0  32 -  17: 1111 1111 1111 1111 0000 0000 0000 0000 = 0xFFFF0000) (except top row 16 - 1)
+        // When layer 1 is active, key LEDs use red    (id1  64 -  33: 1111 1111 1111 1111 1111 1111 1111 1111 = 0xFFFFFFFF)
+        // When layer 1 is active, key LEDs use red    (id2  87 -  65: 0000 0000 0111 1111 1111 1111 1111 1111 = 0x007FFFFF)
+        // When layer 1 is active, edge LEDs use green (id2  95 -  88: 1111 1111 1000 0000 0000 0000 0000 0000 = 0xFF800000)
+        // When layer 1 is active, edge LEDs use green (id3 119 -  96: 0000 0000 1111 1111 1111 1111 1111 1111 = 0x00FFFFFF)
+        // { .flags = LED_FLAG_USE_ROTATE_PATTERN },
+        // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_MATCH_LAYER | LED_FLAG_USE_RGB, .id0 = 0xFFFF0000, .id1 = 0xFFFFFFFF, .id2 = 0x007FFFFF, .r = 255, .layer = 1 },
+        // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_MATCH_LAYER | LED_FLAG_USE_RGB, .id2 = 0xFF800000, .id3 = 0x00FFFFFF, .g = 127, .layer = 1 },
 
-    // All key LEDs use red while edge LEDs use the active pattern
-    // All key LEDs use red     (id0  32 -   1: 1111 1111 1111 1111 1111 1111 1111 1111 = 0xFFFFFFFF)
-    // All key LEDs use red     (id1  64 -  33: 1111 1111 1111 1111 1111 1111 1111 1111 = 0xFFFFFFFF)
-    // All key LEDs use red     (id2  87 -  65: 0000 0000 0111 1111 1111 1111 1111 1111 = 0x007FFFFF)
-    // Edge uses active pattern (id2  95 -  88: 1111 1111 1000 0000 0000 0000 0000 0000 = 0xFF800000)
-    // Edge uses active pattern (id3 119 -  96: 0000 0000 1111 1111 1111 1111 1111 1111 = 0x00FFFFFF)
-    // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_USE_RGB, .id0 = 0xFFFFFFFF, .id1 = 0xFFFFFFFF, .id2 = 0x007FFFFF, .r = 255 },
-    // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_USE_ROTATE_PATTERN , .id2 = 0xFF800000, .id3 = 0x00FFFFFF },
+        // All key LEDs use red while edge LEDs use the active pattern
+        // All key LEDs use red     (id0  32 -   1: 1111 1111 1111 1111 1111 1111 1111 1111 = 0xFFFFFFFF)
+        // All key LEDs use red     (id1  64 -  33: 1111 1111 1111 1111 1111 1111 1111 1111 = 0xFFFFFFFF)
+        // All key LEDs use red     (id2  87 -  65: 0000 0000 0111 1111 1111 1111 1111 1111 = 0x007FFFFF)
+        // Edge uses active pattern (id2  95 -  88: 1111 1111 1000 0000 0000 0000 0000 0000 = 0xFF800000)
+        // Edge uses active pattern (id3 119 -  96: 0000 0000 1111 1111 1111 1111 1111 1111 = 0x00FFFFFF)
+        // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_USE_RGB, .id0 = 0xFFFFFFFF, .id1 = 0xFFFFFFFF, .id2 = 0x007FFFFF, .r = 255 },
+        // { .flags = LED_FLAG_MATCH_ID | LED_FLAG_USE_ROTATE_PATTERN , .id2 = 0xFF800000, .id3 = 0x00FFFFFF },
 
-    // end must be set to 1 to indicate end of instruction set
-    {.end = 1}};
+        // end must be set to 1 to indicate end of instruction set
+        {.end = 1}};
